@@ -5,6 +5,7 @@
   * HTML5/CSS3
   * CSS Grid
   * CSS Flex
+  * Sass
   * BEM Methodology
   * NPM packages (After, downloading make sure to load these!)
   * Responsive design</h3>
