@@ -1,0 +1,105 @@
+.studio {
+    grid-column: 1 / -1;
+    background-color: $color-light-brown-2;
+    
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    //grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: 1fr 1fr;
+
+
+   
+
+    &__pictures {
+        grid-column: 1 / 7;
+        grid-row: 1 / -1;
+
+
+        display: grid;
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-columns: repeat(6, 1fr);
+        margin: 6rem 0 6rem 6rem;
+
+        @media only screen and (max-width: $bp-large) {
+            margin-left: 3rem;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-row: 2 / 3;
+            grid-column: 1 / -1;
+            margin: 1rem 0 3rem;
+        }
+    }
+
+    &__picture--1 {
+        grid-column: 1 / 7;
+        grid-row: 1 / 7;
+        width: 50%;
+        box-shadow: 0 2.4rem 2rem rgba($color-black,.2);
+        align-self: center;
+        margin-bottom: 3rem;
+
+        @media only screen and (max-width: $bp-medium) {
+            //width: 30%;
+            grid-column: 1 / 4;
+            align-self: center;
+            justify-self: end;
+        }
+    }
+
+
+    &__picture--2 {
+        grid-column: 3 / 7;
+        grid-row: 2 / 7;
+        width: 70%;
+        justify-self: center;
+        box-shadow: 0 2.4rem 2rem rgba($color-black,.2);
+        align-self: center;
+        margin-top: 3rem;  
+        @media only screen and (max-width: $bp-medium) {
+            width: 45%;
+            grid-column: 4 / 7;
+            justify-self: start;
+        }     
+    }
+
+    &__content {
+        grid-column: 7 / -1;
+        grid-row: 1 / -1;
+        //grid-row: 1 / -1;
+        justify-self: center;
+        align-self: center;
+        padding: 8rem 8rem 8rem 0;
+        background-color: $color-light-brown-2;
+
+        @media only screen and (max-width: $bp-large) {
+            padding-right: 3rem;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-row: 1 / 2;
+            grid-column: 1 / -1;
+            padding: 3rem 3rem 0 3rem;
+        }
+
+
+        &--tag {
+            margin-bottom: 4rem;
+        }
+
+        &--description {
+            margin-bottom: 4rem;
+        }
+
+    }
+    
+    &--btn {
+        background-color: rgba($color-dark-brown-1, 0.75);
+        color: #fff;
+    }
+
+    &--btn:hover {
+        background-color: rgba($color-dark-brown-1, 0.9);
+    }
+}
+

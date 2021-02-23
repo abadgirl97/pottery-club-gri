@@ -1,0 +1,116 @@
+//COLORS
+$color-dark-brown-1: #3e191a;
+$color-dark-brown-2: #87431d;
+$color-dark-brown-3: #240e0f;
+$color-light-brown-1: #c87941;
+$color-light-brown-2: #dbcbbd;
+
+$color-green: #61871d;
+$color-yellow: #e2952c;
+
+$color-blue: #1d6187;
+$color-primary-purple: #431d87;
+
+$color-white: #fff;
+$color-black: #000;
+
+// Global reset
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    //font-family: 'Lato', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+// BREAKPOINTS
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em; // 1200px/16=75em
+$bp-large: 62.5em; // 1000px
+$bp-medium: 50em; // 800px
+$bp-small: 37.5em; // 600px
+
+.container {
+    display: grid;
+    grid-template-rows: 100vh repeat(3, min-content) min-content 60vh min-content min-content;
+    
+    @media only screen and (max-width: $bp-large) {
+        grid-template-rows: 70vh repeat(3, min-content) min-content 60vh min-content min-content;
+    }
+    
+    grid-template-columns: repeat(8, 1fr);
+    
+}
+
+
+
+// HEADINGS
+
+h1 {
+    font-size: 7rem;
+    text-align: center;
+    color: $color-white;
+    letter-spacing: 4px;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: 5.5rem;
+    //text-align: center;
+    color: $color-black;
+    letter-spacing: 2px;
+    line-height: 1.2;
+
+    @media only screen and (max-width: $bp-large) {
+        font-size: 4.5rem;
+    }
+}
+
+h3 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    font-weight: 100;
+}
+
+h4 {
+    font-size: 3rem;
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+p {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+}
+
+.btn {
+    color: $color-black;
+    background-color: rgba(#fff, 0.9);
+    font-weight: 300;
+    padding: 1.5rem 3rem;
+    border-style: none;
+    box-shadow: 0 2.4rem 2rem rgba($color-black,.2);
+    border-radius: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 1.2rem;
+    //justify-self: center;
+}
+
+.btn:hover {
+    transition: all .3s;
+    cursor: pointer;
+}

@@ -1,0 +1,81 @@
+.mission {
+    grid-column: 1 / -1;
+    //grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    background-color: $color-light-brown-2;
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content 1fr;
+    }
+
+    &__content {
+        background-color: $color-light-brown-1;
+        grid-column: 1 / 2;
+        grid-row: 1 / -1;
+        padding: 3rem 12rem;
+        //justify-items: center;
+
+        @media only screen and (max-width: $bp-large) {
+            padding: 3rem 5rem;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-column: 1 / -1;
+            grid-row: 1 / 2;
+        }
+
+        display: grid;
+        grid-template-rows: 1fr repeat(3, min-content) 1fr;
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-template-rows: repeat(5, min-content);
+        }
+
+        &--headline {
+            padding-bottom: 4rem;
+            grid-row: 2 / 3;
+        }
+
+        &--description {
+            padding-bottom: 4rem;
+            grid-row: 3 / 4;
+        }
+    }
+
+    &__pictures {
+        background-color: $color-light-brown-2;
+        grid-column: 2 / 3;
+        grid-row: 1 / -1;
+        align-self: center;
+        text-align: center;
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-column: 1 / -1;
+            grid-row: 2 / 3;
+        }
+
+        &--picture {
+            width: 50%;
+            margin: 5rem 0;
+            box-shadow: 0 2.4rem 2rem rgba($color-black,.2);
+
+            @media only screen and (max-width: $bp-medium) {
+                margin: 3rem 0;
+                width: 30%;
+            }
+        }
+    }
+
+    &--btn {
+        grid-row: 4 / 5;
+        justify-self: start;
+    }
+
+    &--btn:hover {
+        background-color: rgba(#fff, 0.6);
+    }
+
+}
