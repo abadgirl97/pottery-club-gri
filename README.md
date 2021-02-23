@@ -1,2 +1,12 @@
-# pottery-club-gri
-Created Feb 2021
+<h1>Pottery Club Grid</h1>
+
+<h3>This repo contains the files for my mock website, Pottery Club, using CSS grid. I use several methodologies here, including:<br>
+  
+  * HTML5/CSS3
+  * CSS Grid
+  * CSS Flex
+  * BEM Methodology
+  * NPM packages (After, downloading make sure to load these!)
+  * Responsive design</h3>
+
+<h3>Please do not use the code for personal use. Or, if you do, atleast credit me :)</h3>
